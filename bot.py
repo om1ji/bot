@@ -21,7 +21,10 @@ def handle_start(message):
 
 @bot.message_handler(commands=['kto_pidor'])
 def kto_pidr(message):
-    bot.reply_to(message, 'Ну кто пидр... кто... ' + '@' + message.from_user.username + ' конечно!')            
+    if message.from_user.username == 'NoneType':
+	bot.reply_to(message, 'Ну кто пидр... кто... ' + message.from_user.first_name + ' конечно!')
+    else:
+	bot.reply_to(message, 'Ну кто пидр... кто... ' + '@' + message.from_user.username + ' конечно!')            
 
 @bot.message_handler(commands=['rnd_chars'])
 def random_hundred_characters(message):
