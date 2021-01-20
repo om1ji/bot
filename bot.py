@@ -47,10 +47,11 @@ def random_hundred_characters(message):
     i = 0
     s = ''
         
-    while i < 100:
-        s += r_symbol() + ' '
-        i += 1
-    bot.reply_to(message, text=s)
+    for x in range(10):
+        for x in range(10):
+            s += ''+ r_symbol() + '' + ' '
+        s += '\n'
+    bot.reply_to(message, text=s, parse_mode='Markdown'>
     
 @bot.message_handler(commands=['help'])
 def command_list(message):
