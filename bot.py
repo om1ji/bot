@@ -51,7 +51,7 @@ def random_hundred_characters(message):
         for x in range(10):
             s += ''+ r_symbol() + '' + ' '
         s += '\n'
-    bot.reply_to(message, text=s, parse_mode='Markdown'>)
+    bot.reply_to(message, text=s, parse_mode='Markdown'>))
     
 @bot.message_handler(commands=['help'])
 def command_list(message):
